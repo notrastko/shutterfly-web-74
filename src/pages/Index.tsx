@@ -1,14 +1,8 @@
 
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import Portfolio from "@/components/Portfolio";
-import About from "@/components/About";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
-import ServiceColumn from "@/components/ServiceColumn";
 import { useEffect } from "react";
 import { Camera, User, Film } from "lucide-react";
 import { Motion } from "@/components/ui/motion";
+import ServiceColumn from "@/components/ServiceColumn";
 
 const Index = () => {
   // Smooth scroll implementation
@@ -40,19 +34,13 @@ const Index = () => {
   }, []);
   
   return (
-    <div className="min-h-screen antialiased">
-      <Navbar />
-      <Hero />
-      
-      {/* Services Section */}
-      <section id="services" className="py-24 px-6 md:px-10 lg:px-20">
-        <Motion animation="fade-in">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-medium mb-4">Our Services</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Specialized photography and media services tailored to your unique needs
-            </p>
-          </div>
+    <div className="min-h-screen antialiased flex items-center justify-center px-6 md:px-10 lg:px-20">
+      <div className="max-w-7xl w-full">
+        <Motion animation="fade-in" className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-medium mb-6">Photography Services</h1>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Explore our specialized photography and media services
+          </p>
         </Motion>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -83,12 +71,7 @@ const Index = () => {
             delay={900}
           />
         </div>
-      </section>
-      
-      <Portfolio />
-      <About />
-      <Contact />
-      <Footer />
+      </div>
     </div>
   );
 };
