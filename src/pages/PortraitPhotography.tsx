@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Motion, ParallaxImage } from "@/components/ui/motion";
@@ -19,8 +18,12 @@ const PortraitPhotography = () => {
         <div className="absolute inset-0 bg-black/40" />
         
         <nav className="relative z-10 flex items-center justify-between p-6 md:p-10">
-          <Link to="/" className="text-2xl font-medium text-white">
-            Omilia Visuals
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/lovable-uploads/1f785f83-f703-4a9c-b057-2e8aedc7c07d.png" 
+              alt="Omilia Visuals Logo" 
+              className="h-10 mr-2"
+            />
           </Link>
           
           <Button 

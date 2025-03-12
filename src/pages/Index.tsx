@@ -43,8 +43,12 @@ const Index = () => {
       {/* Navigation overlay */}
       <nav className="fixed top-0 left-0 w-full z-50 px-6 md:px-10 py-6">
         <div className="flex items-center justify-between">
-          <Link to="/" className="text-2xl font-medium text-white drop-shadow-md">
-            Omilia Visuals
+          <Link to="/" className="flex items-center text-white drop-shadow-md">
+            <img 
+              src="/lovable-uploads/1f785f83-f703-4a9c-b057-2e8aedc7c07d.png" 
+              alt="Omilia Visuals Logo" 
+              className="h-10 mr-2"
+            />
           </Link>
           
           <div className="hidden md:flex items-center space-x-10">

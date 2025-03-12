@@ -1,33 +1,11 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Motion, ParallaxImage } from "@/components/ui/motion";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, Film, Check, ChevronRight, ChevronLeft as LeftArrow } from "lucide-react";
+import { ChevronLeft, Film, Check, Users, Building } from "lucide-react";
 
 const MediaProduction = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  
-  const clients = [
-    { name: "TechCorp", logo: "https://images.unsplash.com/photo-1516876437184-593fda40c7ce?auto=format&fit=crop&q=80" },
-    { name: "Greenlife", logo: "https://images.unsplash.com/photo-1573164574472-797cdf4a583a?auto=format&fit=crop&q=80" },
-    { name: "Madison", logo: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80" },
-    { name: "Apex", logo: "https://images.unsplash.com/photo-1516876437184-593fda40c7ce?auto=format&fit=crop&q=80" },
-    { name: "BlueSky", logo: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80" },
-    { name: "Pinnacle", logo: "https://images.unsplash.com/photo-1573164574472-797cdf4a583a?auto=format&fit=crop&q=80" },
-  ];
-  
-  const totalSlides = Math.ceil(clients.length / 3);
-  
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % totalSlides);
-  };
-  
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
-  };
-  
   return (
     <div className="min-h-screen antialiased">
       <header className="h-[60vh] relative">
@@ -38,8 +16,12 @@ const MediaProduction = () => {
         <div className="absolute inset-0 bg-black/40" />
         
         <nav className="relative z-10 flex items-center justify-between p-6 md:p-10">
-          <Link to="/" className="text-2xl font-medium text-white">
-            Omilia Visuals
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/lovable-uploads/1f785f83-f703-4a9c-b057-2e8aedc7c07d.png" 
+              alt="Omilia Visuals Logo" 
+              className="h-10 mr-2"
+            />
           </Link>
           
           <Button 
@@ -75,16 +57,16 @@ const MediaProduction = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div>
                   <p className="text-lg text-muted-foreground mb-6">
-                    Our media strategy and production services go beyond simple photography to provide comprehensive visual solutions for brands and businesses. We help you craft a compelling visual identity that resonates with your audience.
+                    Our media production services focus on creating compelling visual content that tells your story and engages your audience. Whether for commercials, corporate videos, or social media campaigns, we deliver high-quality productions that elevate your brand.
                   </p>
                   <p className="text-lg text-muted-foreground">
-                    From concept development to final delivery, we work closely with you to ensure your media assets align with your brand's vision and goals. Our team combines creativity with strategic thinking to produce content that drives results.
+                    We guide you through the entire process, from concept development to post-production, ensuring a seamless and successful project.
                   </p>
                 </div>
                 <div className="aspect-[4/5] overflow-hidden rounded-lg">
                   <ParallaxImage 
-                    src="https://images.unsplash.com/photo-1533243585514-2e1ce25cf0c7?auto=format&fit=crop&q=80" 
-                    alt="Media production" 
+                    src="https://images.unsplash.com/photo-1505740420928-5e0e321cd26e?auto=format&fit=crop&q=80" 
+                    alt="Professional media production" 
                     className="w-full h-full"
                   />
                 </div>
@@ -102,8 +84,8 @@ const MediaProduction = () => {
                 {[1, 2, 3, 4, 5, 6].map((item) => (
                   <div key={item} className="aspect-square overflow-hidden rounded-lg image-card">
                     <img 
-                      src={`https://images.unsplash.com/photo-${1605810230434 + item * 100000}-7631ac76ec81?auto=format&fit=crop&q=80`} 
-                      alt={`Media portfolio ${item}`} 
+                      src={`https://images.unsplash.com/photo-${1605810230434 + item * 10000}-7631ac76ec81?auto=format&fit=crop&q=80`} 
+                      alt={`Media production portfolio ${item}`} 
                       className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                     />
                   </div>
@@ -120,146 +102,67 @@ const MediaProduction = () => {
         <section className="py-16 px-6 md:px-10 lg:px-20 bg-white">
           <div className="max-w-6xl mx-auto">
             <Motion animation="fade-in">
-              <h2 className="text-3xl md:text-4xl font-medium mb-10 text-center">Our Services</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <h2 className="text-3xl md:text-4xl font-medium mb-4 text-center">Our Services</h2>
+              <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
+                Explore our comprehensive media production services tailored to elevate your brand.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {/* Service 1 */}
                 <ServiceCard
-                  title="Brand Strategy"
-                  description="Develop a cohesive visual identity and messaging framework that resonates with your target audience."
-                  iconSrc="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80"
+                  title="Commercial Production"
+                  description="High-impact commercials that drive results"
+                  icon={Film}
                 />
                 
+                {/* Service 2 */}
                 <ServiceCard
-                  title="Content Creation"
-                  description="Professional photography and videography for marketing, social media, and advertising campaigns."
-                  iconSrc="https://images.unsplash.com/photo-1541555715243-f5eda01d9106?auto=format&fit=crop&q=80"
+                  title="Corporate Videos"
+                  description="Engaging videos for internal and external communications"
+                  icon={Users}
+                  highlighted
                 />
                 
+                {/* Service 3 */}
                 <ServiceCard
-                  title="Video Production"
-                  description="Full-service video production including concept development, filming, and post-production."
-                  iconSrc="https://images.unsplash.com/photo-1601813655468-90669101469f?auto=format&fit=crop&q=80"
-                />
-                
-                <ServiceCard
-                  title="Commercial Photography"
-                  description="High-quality product and commercial photography for e-commerce, catalogs, and advertising."
-                  iconSrc="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=80"
-                />
-                
-                <ServiceCard
-                  title="Social Media Strategy"
-                  description="Strategic planning and creation of visual content optimized for different social media platforms."
-                  iconSrc="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80"
-                />
-                
-                <ServiceCard
-                  title="Event Coverage"
-                  description="Comprehensive photography and video coverage for corporate events, product launches, and conferences."
-                  iconSrc="https://images.unsplash.com/photo-1540317580384-e5d43867caa6?auto=format&fit=crop&q=80"
+                  title="Real Estate Media"
+                  description="Stunning visuals to showcase properties"
+                  icon={Building}
                 />
               </div>
               
-              <div className="text-center mt-12">
-                <Button>Request a Consultation</Button>
+              <div className="text-center mt-10">
+                <p className="text-muted-foreground mb-6">
+                  Custom solutions and specialized needs are also available.
+                </p>
+                <Button>Request Custom Quote</Button>
               </div>
             </Motion>
           </div>
         </section>
         
-        {/* Clients & Partners Section */}
+        {/* Clients Section */}
         <section className="py-16 px-6 md:px-10 lg:px-20 bg-gray-50">
           <div className="max-w-6xl mx-auto">
             <Motion animation="fade-in">
-              <h2 className="text-3xl md:text-4xl font-medium mb-10 text-center">Our Clients & Partners</h2>
-              
-              <div className="relative">
-                <div className="overflow-hidden">
-                  <div 
-                    className="flex transition-transform duration-500 ease-in-out"
-                    style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-                  >
-                    {Array.from({ length: totalSlides }).map((_, slideIndex) => (
-                      <div key={slideIndex} className="w-full flex-shrink-0">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                          {clients.slice(slideIndex * 3, slideIndex * 3 + 3).map((client, index) => (
-                            <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex items-center justify-center h-40">
-                              <img 
-                                src={client.logo} 
-                                alt={client.name} 
-                                className="max-h-20 max-w-full opacity-80 hover:opacity-100 transition-opacity"
-                              />
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                
-                {totalSlides > 1 && (
-                  <div className="flex items-center justify-center mt-8 gap-4">
-                    <Button 
-                      variant="outline" 
-                      size="icon" 
-                      onClick={prevSlide}
-                      className="rounded-full"
-                    >
-                      <LeftArrow className="h-4 w-4" />
-                    </Button>
-                    
-                    <div className="flex gap-2">
-                      {Array.from({ length: totalSlides }).map((_, index) => (
-                        <button
-                          key={index}
-                          className={cn(
-                            "w-2.5 h-2.5 rounded-full transition-colors",
-                            currentSlide === index ? "bg-primary" : "bg-gray-300"
-                          )}
-                          onClick={() => setCurrentSlide(index)}
-                        />
-                      ))}
-                    </div>
-                    
-                    <Button 
-                      variant="outline" 
-                      size="icon" 
-                      onClick={nextSlide}
-                      className="rounded-full"
-                    >
-                      <ChevronRight className="h-4 w-4" />
-                    </Button>
-                  </div>
-                )}
-              </div>
-            </Motion>
-          </div>
-        </section>
-        
-        {/* Testimonials Section */}
-        <section className="py-16 px-6 md:px-10 lg:px-20 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <Motion animation="fade-in">
-              <h2 className="text-3xl md:text-4xl font-medium mb-10 text-center">Client Testimonials</h2>
+              <h2 className="text-3xl md:text-4xl font-medium mb-10 text-center">Our Clients</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <TestimonialCard
-                  quote="Omilia Visuals transformed our brand's visual identity. Their strategic approach and creative execution exceeded our expectations."
-                  author="Robert Chen"
-                  role="Marketing Director, TechCorp"
-                  image="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"
+                <ClientCard
+                  name="Acme Corp"
+                  logo="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&q=80"
+                  industry="Technology"
                 />
                 
-                <TestimonialCard
-                  quote="The content they created for our social media campaigns directly contributed to a 40% increase in engagement. Their team is professional, responsive, and incredibly talented."
-                  author="Lisa Peterson"
-                  role="Social Media Manager, Greenlife"
-                  image="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80"
+                <ClientCard
+                  name="Beta Industries"
+                  logo="https://images.unsplash.com/photo-1616587894644-60359a586c84?auto=format&fit=crop&q=80"
+                  industry="Manufacturing"
                 />
                 
-                <TestimonialCard
-                  quote="From concept to execution, working with Omilia was seamless. They understood our vision and brought it to life in ways we couldn't have imagined."
-                  author="Marcus Williams"
-                  role="CEO, BlueSky Ventures"
-                  image="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80"
+                <ClientCard
+                  name="Gamma Solutions"
+                  logo="https://images.unsplash.com/photo-1541701496587-5a75505ef3e5?auto=format&fit=crop&q=80"
+                  industry="Consulting"
                 />
               </div>
             </Motion>
@@ -267,16 +170,16 @@ const MediaProduction = () => {
         </section>
         
         {/* Contact Section */}
-        <section className="py-16 px-6 md:px-10 lg:px-20 bg-gray-50">
+        <section className="py-16 px-6 md:px-10 lg:px-20 bg-white">
           <div className="max-w-3xl mx-auto text-center">
             <Motion animation="fade-in">
               <h2 className="text-3xl md:text-4xl font-medium mb-6">Ready to elevate your brand?</h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Contact us today to discuss how we can help you achieve your media goals.
+                Contact us today to discuss your media production needs.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Button size="lg">Schedule a Consultation</Button>
-                <Button variant="outline" size="lg">View Our Process</Button>
+                <Button size="lg">Contact Us</Button>
+                <Button variant="outline" size="lg">View More Examples</Button>
               </div>
             </Motion>
           </div>
@@ -289,47 +192,61 @@ const MediaProduction = () => {
 interface ServiceCardProps {
   title: string;
   description: string;
-  iconSrc: string;
+  icon: React.ComponentType<any>;
+  highlighted?: boolean;
 }
 
-const ServiceCard = ({ title, description, iconSrc }: ServiceCardProps) => {
+const ServiceCard = ({ 
+  title, 
+  description, 
+  icon: Icon,
+  highlighted = false 
+}: ServiceCardProps) => {
   return (
-    <div className="border border-gray-200 rounded-lg overflow-hidden group">
-      <div className="h-48 overflow-hidden">
-        <img 
-          src={iconSrc} 
-          alt={title} 
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-        />
+    <div 
+      className={cn(
+        "border rounded-lg p-6 transition-all duration-300 relative",
+        highlighted ? "border-primary shadow-lg" : "border-gray-200"
+      )}
+    >
+      {highlighted && (
+        <div className="absolute top-0 right-0 -mt-3 -mr-3 bg-primary text-white text-xs px-3 py-1 rounded-full">
+          Popular
+        </div>
+      )}
+      
+      <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4">
+        <Icon className="w-6 h-6 text-primary" />
       </div>
-      <div className="p-6">
-        <h3 className="text-xl font-medium mb-3">{title}</h3>
-        <p className="text-muted-foreground text-sm">{description}</p>
-      </div>
+      
+      <h3 className="text-xl font-medium mb-2">{title}</h3>
+      <p className="text-muted-foreground text-sm mb-6">{description}</p>
+      
+      <Button variant={highlighted ? "default" : "outline"} className="w-full">
+        Learn More
+      </Button>
     </div>
   );
 };
 
-interface TestimonialCardProps {
-  quote: string;
-  author: string;
-  role: string;
-  image: string;
+interface ClientCardProps {
+  name: string;
+  logo: string;
+  industry: string;
 }
 
-const TestimonialCard = ({ quote, author, role, image }: TestimonialCardProps) => {
+const ClientCard = ({ name, logo, industry }: ClientCardProps) => {
   return (
-    <div className="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-100">
+    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
       <div className="flex items-center mb-4">
-        <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-          <img src={image} alt={author} className="w-full h-full object-cover" />
+        <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
+          <img src={logo} alt={name} className="w-full h-full object-cover" />
         </div>
         <div>
-          <h4 className="font-medium">{author}</h4>
-          <p className="text-sm text-muted-foreground">{role}</p>
+          <h4 className="font-medium">{name}</h4>
+          <p className="text-sm text-muted-foreground">{industry}</p>
         </div>
       </div>
-      <p className="italic text-muted-foreground">&ldquo;{quote}&rdquo;</p>
     </div>
   );
 };
