@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import WeddingPhotography from "./pages/WeddingPhotography";
 import PortraitPhotography from "./pages/PortraitPhotography";
 import MediaProduction from "./pages/MediaProduction";
+import Blog from "./pages/Blog";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/wedding-photography" element={<WeddingPhotography />} />
           <Route path="/portrait-photography" element={<PortraitPhotography />} />
           <Route path="/media-production" element={<MediaProduction />} />
+          <Route path="/blog" element={<Blog />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
