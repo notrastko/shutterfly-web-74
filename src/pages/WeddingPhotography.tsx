@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Motion, ParallaxImage } from "@/components/ui/motion";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, Camera, Check, Heart } from "lucide-react";
+import { ChevronLeft, Camera, Check, Heart, VideoIcon } from "lucide-react";
 
 const WeddingPhotography = () => {
   const [selectedPackage, setSelectedPackage] = useState<string | null>(null);
@@ -163,7 +163,7 @@ const WeddingPhotography = () => {
                     "500 edited photos",
                     "Premium wedding album"
                   ]}
-                  icon={Video}
+                  icon={VideoIcon}
                   isSelected={selectedPackage === "luxe"}
                   onClick={() => setSelectedPackage("luxe")}
                 />
