@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, Film, Check, Users, Building } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const MediaProduction = () => {
   return (
@@ -168,6 +169,9 @@ const MediaProduction = () => {
           </div>
         </section>
       </main>
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

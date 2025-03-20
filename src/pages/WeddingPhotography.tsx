@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import WeddingHero from "@/components/wedding/WeddingHero";
 import ApproachSection from "@/components/wedding/ApproachSection";
 import ProcessSection from "@/components/wedding/ProcessSection";
@@ -50,6 +51,9 @@ const WeddingPhotography = () => {
         {/* Contact Section */}
         <ContactSection />
       </main>
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

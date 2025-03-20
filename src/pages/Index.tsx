@@ -5,6 +5,7 @@ import { Camera, User, Film } from "lucide-react";
 import { Motion } from "@/components/ui/motion";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   // Smooth scroll implementation
@@ -36,12 +37,12 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="h-screen w-full flex flex-col overflow-hidden">
+    <div className="flex flex-col min-h-screen">
       {/* Navigation */}
       <Navbar />
       
       {/* Main content - 3 columns */}
-      <div className="flex-1 grid grid-cols-1 md:grid-cols-3 h-full">
+      <div className="flex-1 grid grid-cols-1 md:grid-cols-3">
         <ServicePanel 
           title="Wedding Photography & Videography"
           description="Capturing your special moments with artistic elegance"
@@ -66,6 +67,9 @@ const Index = () => {
           linkTo="/media-production"
         />
       </div>
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

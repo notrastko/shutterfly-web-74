@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, Camera, Check } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const PortraitPhotography = () => {
   const [selectedPackage, setSelectedPackage] = useState<string | null>(null);
@@ -204,6 +205,9 @@ const PortraitPhotography = () => {
           </div>
         </section>
       </main>
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

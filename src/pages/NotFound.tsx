@@ -4,14 +4,15 @@ import { Motion } from "@/components/ui/motion";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const NotFound = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-6 bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-gray-50">
       <Navbar />
       
-      <Motion animation="fade-in">
-        <div className="text-center mt-20">
+      <Motion animation="fade-in" className="flex-grow flex items-center justify-center p-6">
+        <div className="text-center">
           <Link to="/" className="flex items-center justify-center mb-8">
             <img 
               src="/lovable-uploads/1f785f83-f703-4a9c-b057-2e8aedc7c07d.png" 
@@ -33,6 +34,8 @@ const NotFound = () => {
           </Button>
         </div>
       </Motion>
+      
+      <Footer />
     </div>
   );
 };

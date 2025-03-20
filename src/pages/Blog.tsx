@@ -1,16 +1,16 @@
-
 import { Link } from "react-router-dom";
 import { Motion } from "@/components/ui/motion";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const Blog = () => {
   return (
-    <div className="min-h-screen bg-gray-50 pt-20">
+    <div className="min-h-screen bg-gray-50">
       {/* Navigation */}
       <Navbar />
       
-      <section className="container mx-auto py-12 px-6">
+      <section className="container mx-auto py-12 px-6 pt-20">
         <Motion animation="fade-in">
           <h1 className="text-3xl font-semibold mb-8">Our Blog</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -86,6 +86,9 @@ const Blog = () => {
           </div>
         </Motion>
       </section>
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
