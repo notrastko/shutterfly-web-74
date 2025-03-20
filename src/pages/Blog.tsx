@@ -1,33 +1,16 @@
+
 import { Link } from "react-router-dom";
 import { Motion } from "@/components/ui/motion";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft } from "lucide-react";
+import Navbar from "@/components/Navbar";
 
 const Blog = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white border-b">
-        <div className="container mx-auto py-6">
-          <nav className="flex items-center justify-between">
-            <Link to="/" className="flex items-center">
-              <img 
-                src="/lovable-uploads/1f785f83-f703-4a9c-b057-2e8aedc7c07d.png" 
-                alt="Omilia Visuals Logo" 
-                className="h-10 mr-2"
-              />
-            </Link>
-            
-            <Button variant="outline" asChild>
-              <Link to="/">
-                <ChevronLeft className="mr-2 h-4 w-4" />
-                Back to Home
-              </Link>
-            </Button>
-          </nav>
-        </div>
-      </header>
+    <div className="min-h-screen bg-gray-50 pt-20">
+      {/* Navigation */}
+      <Navbar />
       
-      <section className="container mx-auto py-12">
+      <section className="container mx-auto py-12 px-6">
         <Motion animation="fade-in">
           <h1 className="text-3xl font-semibold mb-8">Our Blog</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

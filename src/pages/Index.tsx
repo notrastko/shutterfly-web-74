@@ -1,13 +1,12 @@
 
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Camera, User, Film, Menu, X } from "lucide-react";
+import { Camera, User, Film } from "lucide-react";
 import { Motion } from "@/components/ui/motion";
 import { cn } from "@/lib/utils";
+import Navbar from "@/components/Navbar";
 
 const Index = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
   // Smooth scroll implementation
   useEffect(() => {
     const handleAnchorClick = (e: MouseEvent) => {
@@ -35,53 +34,11 @@ const Index = () => {
     document.addEventListener('click', handleAnchorClick);
     return () => document.removeEventListener('click', handleAnchorClick);
   }, []);
-  
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
     <div className="h-screen w-full flex flex-col overflow-hidden">
-      {/* Navigation overlay */}
-      <nav className="fixed top-0 left-0 w-full z-50 px-6 md:px-10 py-6">
-        <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center text-white drop-shadow-md">
-            <img 
-              src="/lovable-uploads/1f785f83-f703-4a9c-b057-2e8aedc7c07d.png" 
-              alt="Omilia Visuals Logo" 
-              className="h-10 mr-2"
-            />
-          </Link>
-          
-          <div className="hidden md:flex items-center space-x-10">
-            <NavLink href="#about">About Us</NavLink>
-            <NavLink href="#services">Services</NavLink>
-            <NavLink href="/blog">Blog</NavLink>
-            <NavLink href="#contact">Contact Us</NavLink>
-          </div>
-          
-          <button 
-            className="md:hidden text-white p-2 z-50" 
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-      </nav>
-      
-      {/* Mobile menu */}
-      <div 
-        className={cn(
-          "fixed inset-0 bg-black/95 z-40 flex items-center justify-center transition-all duration-300 md:hidden",
-          isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        )}
-      >
-        <div className="flex flex-col items-center space-y-8">
-          <NavLink href="#about" onClick={toggleMenu}>About Us</NavLink>
-          <NavLink href="#services" onClick={toggleMenu}>Services</NavLink>
-          <NavLink href="/blog" onClick={toggleMenu}>Blog</NavLink>
-          <NavLink href="#contact" onClick={toggleMenu}>Contact Us</NavLink>
-        </div>
-      </div>
+      {/* Navigation */}
+      <Navbar />
       
       {/* Main content - 3 columns */}
       <div className="flex-1 grid grid-cols-1 md:grid-cols-3 h-full">
@@ -112,24 +69,6 @@ const Index = () => {
     </div>
   );
 };
-
-const NavLink = ({ 
-  href, 
-  children, 
-  onClick 
-}: { 
-  href: string; 
-  children: React.ReactNode;
-  onClick?: () => void;
-}) => (
-  <a 
-    href={href} 
-    onClick={onClick}
-    className="text-white text-sm font-medium hover:opacity-70 transition-opacity relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-white after:transition-all hover:after:w-full"
-  >
-    {children}
-  </a>
-);
 
 interface ServicePanelProps {
   title: string;

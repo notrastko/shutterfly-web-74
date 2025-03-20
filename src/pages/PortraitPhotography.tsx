@@ -4,39 +4,22 @@ import { Motion, ParallaxImage } from "@/components/ui/motion";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, Camera, Check } from "lucide-react";
+import Navbar from "@/components/Navbar";
 
 const PortraitPhotography = () => {
   const [selectedPackage, setSelectedPackage] = useState<string | null>(null);
   
   return (
     <div className="min-h-screen antialiased">
+      {/* Navigation */}
+      <Navbar />
+      
       <header className="h-[60vh] relative">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1581456495146-65a71b2c8e52?auto=format&fit=crop&q=80')" }}
         />
         <div className="absolute inset-0 bg-black/40" />
-        
-        <nav className="relative z-10 flex items-center justify-between p-6 md:p-10">
-          <Link to="/" className="flex items-center">
-            <img 
-              src="/lovable-uploads/1f785f83-f703-4a9c-b057-2e8aedc7c07d.png" 
-              alt="Omilia Visuals Logo" 
-              className="h-10 mr-2"
-            />
-          </Link>
-          
-          <Button 
-            variant="outline" 
-            className="text-white border-white hover:bg-white/20"
-            asChild
-          >
-            <Link to="/">
-              <ChevronLeft className="mr-2 h-4 w-4" />
-              Back to Home
-            </Link>
-          </Button>
-        </nav>
         
         <div className="absolute bottom-0 left-0 w-full p-6 md:p-10">
           <Motion animation="slide-up">
