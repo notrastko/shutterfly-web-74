@@ -60,6 +60,156 @@ const WeddingPhotography = () => {
           </div>
         </section>
         
+        {/* How it Works Section */}
+        <section className="py-16 px-6 md:px-10 lg:px-20 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <Motion animation="fade-in">
+              <h2 className="text-3xl md:text-4xl font-medium mb-10 text-center">How it Works</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center p-6 bg-white rounded-lg shadow-sm">
+                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary mx-auto mb-4">
+                    <span className="font-bold">1</span>
+                  </div>
+                  <h3 className="text-xl font-medium mb-3">Initial Consultation</h3>
+                  <p className="text-muted-foreground">We meet to discuss your vision, preferences, and wedding details to create a personalized plan for your day.</p>
+                </div>
+                
+                <div className="text-center p-6 bg-white rounded-lg shadow-sm">
+                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary mx-auto mb-4">
+                    <span className="font-bold">2</span>
+                  </div>
+                  <h3 className="text-xl font-medium mb-3">Pre-Wedding Planning</h3>
+                  <p className="text-muted-foreground">We'll create a detailed timeline, visit locations, and coordinate with your other vendors to ensure everything runs smoothly.</p>
+                </div>
+                
+                <div className="text-center p-6 bg-white rounded-lg shadow-sm">
+                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary mx-auto mb-4">
+                    <span className="font-bold">3</span>
+                  </div>
+                  <h3 className="text-xl font-medium mb-3">Your Wedding Day</h3>
+                  <p className="text-muted-foreground">We capture your day with our signature style, focusing on authentic moments and beautiful details.</p>
+                </div>
+              </div>
+              <div className="text-center mt-8">
+                <p className="text-muted-foreground mb-4">After your wedding, we carefully edit your photos and deliver a beautiful collection of memories that will last a lifetime.</p>
+              </div>
+            </Motion>
+          </div>
+        </section>
+        
+        {/* The Team Section */}
+        <section className="py-16 px-6 md:px-10 lg:px-20 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <Motion animation="fade-in">
+              <h2 className="text-3xl md:text-4xl font-medium mb-10 text-center">The Team</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1601412436009-d964bd02edbc?auto=format&fit=crop&q=80" alt="Lead Photographer" className="w-full h-full object-cover" />
+                  </div>
+                  <h3 className="text-xl font-medium mb-2">Emily Johnson</h3>
+                  <p className="text-sm text-primary mb-2">Lead Photographer</p>
+                  <p className="text-muted-foreground">With over 10 years of experience, Emily's artistic vision and attention to detail create timeless images.</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80" alt="Second Photographer" className="w-full h-full object-cover" />
+                  </div>
+                  <h3 className="text-xl font-medium mb-2">Michael Chen</h3>
+                  <p className="text-sm text-primary mb-2">Second Photographer</p>
+                  <p className="text-muted-foreground">Michael's documentary approach ensures no moment goes uncaptured, from candid emotions to spontaneous celebrations.</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80" alt="Videographer" className="w-full h-full object-cover" />
+                  </div>
+                  <h3 className="text-xl font-medium mb-2">Sophia Rodriguez</h3>
+                  <p className="text-sm text-primary mb-2">Lead Videographer</p>
+                  <p className="text-muted-foreground">Sophia's cinematic approach to wedding films creates emotional narratives that tell your unique love story.</p>
+                </div>
+              </div>
+            </Motion>
+          </div>
+        </section>
+        
+        {/* Testimonials Section */}
+        <section className="py-16 px-6 md:px-10 lg:px-20 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <Motion animation="fade-in">
+              <h2 className="text-3xl md:text-4xl font-medium mb-10 text-center">Testimonials</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <TestimonialCard
+                  quote="They captured our day perfectly. The photos are beautiful and really tell the story of our wedding."
+                  author="Sarah & James"
+                  role="Bride & Groom"
+                  image="https://images.unsplash.com/photo-1516685125522-3c528b8046ee?auto=format&fit=crop&q=80"
+                />
+                
+                <TestimonialCard
+                  quote="Working with Omilia was the best decision we made for our wedding. They were professional, creative, and made us feel so comfortable."
+                  author="Emily & Michael"
+                  role="Bride & Groom"
+                  image="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80"
+                />
+                
+                <TestimonialCard
+                  quote="The photos and video exceeded our expectations. They captured moments we didn't even realize were happening. Truly talented professionals."
+                  author="Jessica & David"
+                  role="Bride & Groom"
+                  image="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&q=80"
+                />
+              </div>
+            </Motion>
+          </div>
+        </section>
+        
+        {/* Featured Section */}
+        <section className="py-16 px-6 md:px-10 lg:px-20 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <Motion animation="fade-in">
+              <h2 className="text-3xl md:text-4xl font-medium mb-10 text-center">Featured Weddings</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="bg-gray-50 rounded-lg overflow-hidden">
+                  <div className="aspect-[16/9] overflow-hidden">
+                    <img 
+                      src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80" 
+                      alt="Beach wedding" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-medium mb-2">Jessica & Mark</h3>
+                    <p className="text-sm text-muted-foreground mb-4">Beachfront Ceremony | Malibu, CA</p>
+                    <p className="text-muted-foreground mb-4">A stunning sunset ceremony on the shores of Malibu, with elegant details and heartfelt moments throughout the day.</p>
+                    <Button variant="outline" size="sm">View Gallery</Button>
+                  </div>
+                </div>
+                
+                <div className="bg-gray-50 rounded-lg overflow-hidden">
+                  <div className="aspect-[16/9] overflow-hidden">
+                    <img 
+                      src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&q=80" 
+                      alt="Garden wedding" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-medium mb-2">Rachel & Daniel</h3>
+                    <p className="text-sm text-muted-foreground mb-4">Botanical Garden | Portland, OR</p>
+                    <p className="text-muted-foreground mb-4">An intimate garden wedding filled with lush greenery, personal touches, and a joyful celebration with close family and friends.</p>
+                    <Button variant="outline" size="sm">View Gallery</Button>
+                  </div>
+                </div>
+              </div>
+              <div className="text-center mt-10">
+                <Button>See More Featured Weddings</Button>
+              </div>
+            </Motion>
+          </div>
+        </section>
+        
         {/* Portfolio Section */}
         <section className="py-16 px-6 md:px-10 lg:px-20 bg-gray-50">
           <div className="max-w-6xl mx-auto">
@@ -157,37 +307,6 @@ const WeddingPhotography = () => {
                   All packages can be customized to fit your specific needs.
                 </p>
                 <Button>Request Custom Quote</Button>
-              </div>
-            </Motion>
-          </div>
-        </section>
-        
-        {/* Testimonials Section */}
-        <section className="py-16 px-6 md:px-10 lg:px-20 bg-gray-50">
-          <div className="max-w-6xl mx-auto">
-            <Motion animation="fade-in">
-              <h2 className="text-3xl md:text-4xl font-medium mb-10 text-center">Client Testimonials</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <TestimonialCard
-                  quote="They captured our day perfectly. The photos are beautiful and really tell the story of our wedding."
-                  author="Sarah & James"
-                  role="Bride & Groom"
-                  image="https://images.unsplash.com/photo-1516685125522-3c528b8046ee?auto=format&fit=crop&q=80"
-                />
-                
-                <TestimonialCard
-                  quote="Working with Omilia was the best decision we made for our wedding. They were professional, creative, and made us feel so comfortable."
-                  author="Emily & Michael"
-                  role="Bride & Groom"
-                  image="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80"
-                />
-                
-                <TestimonialCard
-                  quote="The photos and video exceeded our expectations. They captured moments we didn't even realize were happening. Truly talented professionals."
-                  author="Jessica & David"
-                  role="Bride & Groom"
-                  image="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&q=80"
-                />
               </div>
             </Motion>
           </div>
