@@ -5,7 +5,7 @@ import WeddingHero from "@/components/wedding/WeddingHero";
 import ApproachSection from "@/components/wedding/ApproachSection";
 import ProcessSection from "@/components/wedding/ProcessSection";
 import TeamSection from "@/components/wedding/TeamSection";
-import TestimonialsSection from "@/components/wedding/TestimonialsSection";
+import ClientTestimonialsSection from "@/components/wedding/ClientTestimonialsSection";
 import FeaturedSection from "@/components/wedding/FeaturedSection";
 import PortfolioSection from "@/components/wedding/PortfolioSection";
 import PackagesSection from "@/components/wedding/PackagesSection";
@@ -32,8 +32,8 @@ const WeddingPhotography = () => {
         {/* The Team Section */}
         <TeamSection />
         
-        {/* Testimonials Section */}
-        <TestimonialsSection />
+        {/* Client Testimonials Section */}
+        <ClientTestimonialsSection />
         
         {/* Featured Section */}
         <FeaturedSection />
