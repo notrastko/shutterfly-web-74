@@ -41,7 +41,7 @@ const About = () => {
           <Motion animation="slide-up" className="order-1 md:order-2">
             <div className="rounded-2xl overflow-hidden h-[500px] shadow-xl">
               <ParallaxImage
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80"
+                src="/lovable-uploads/9bc8dc7b-5e42-4151-8cfe-ff3d434f5b73.png"
                 alt="Photographer working"
                 className="w-full h-full"
               />
