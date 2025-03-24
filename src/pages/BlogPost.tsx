@@ -103,18 +103,18 @@ const getBlogPostData = (id: string | undefined) => {
       author: 'Omilia Visuals Team',
       readTime: 5,
       content: [
-        'Your wedding day is one of the most memorable moments of your life, and naturally, you want your photos to reflect the joy and love you feel. But if the thought of being in front of the camera makes you nervous, you're not alone.',
-        'A lot of couples are either camera-shy or worry about looking awkward and stiff in front of the camera. The good news is it doesn't have to be that way! As professional wedding and engagement photographers in Toronto, we've worked with so many couples who felt the same way at first, but we help them relax, have fun, and actually enjoy their photo session. So, if you're looking to feel confident and natural in your wedding photos, here's how!',
-        '1. Choose a Photographer You Trust',
-        'Your comfort starts long before the actual day of the shoot. It begins with the right photographer. Look for someone whose style you love; someone who makes you feel at ease. Having a conversation beforehand is a great way to build rapport and get used to being photographed. At Omilia Visuals, we prioritize consultation sessions that help us get to know our clients better, and also answer whatever questions they may have. This fosters a healthy working relationship that makes the photo sessions seamless.',
-        '2. Focus on Each Other, Not the Camera',
-        'Hard as this might seem, it's a great hack! The best wedding photos capture real emotions. So, instead of worrying about posing, focus on your partner. Whisper an inside joke, hold hands, or steal a quiet moment together. When you connect naturally, your photos will reflect that authenticity.',
-        '3. Trust the Process (and Your Photographer)',
-        'A professional photographer knows how to guide you, adjust your angles, and capture the best moments. Trust their direction, and don't overthink your expressions.',
-        'Bonus: Enjoy the Moment!',
-        'The day is about you, not just the photos. The more you focus on soaking in the experience (laughing, celebrating, and being present) the more effortless and beautiful your photos will be.',
-        'Feeling comfortable in front of the camera is about trust and connection. When you let go of the pressure to "pose perfectly" and simply enjoy your day next to the love of your life, your photos will radiate what you feel inside.',
-        'Planning your Toronto wedding? Let's chat about capturing your love story in the most natural and authentic way possible.'
+        "Your wedding day is one of the most memorable moments of your life, and naturally, you want your photos to reflect the joy and love you feel. But if the thought of being in front of the camera makes you nervous, you're not alone.",
+        "A lot of couples are either camera-shy or worry about looking awkward and stiff in front of the camera. The good news is it doesn't have to be that way! As professional wedding and engagement photographers in Toronto, we've worked with so many couples who felt the same way at first, but we help them relax, have fun, and actually enjoy their photo session. So, if you're looking to feel confident and natural in your wedding photos, here's how!",
+        "1. Choose a Photographer You Trust",
+        "Your comfort starts long before the actual day of the shoot. It begins with the right photographer. Look for someone whose style you love; someone who makes you feel at ease. Having a conversation beforehand is a great way to build rapport and get used to being photographed. At Omilia Visuals, we prioritize consultation sessions that help us get to know our clients better, and also answer whatever questions they may have. This fosters a healthy working relationship that makes the photo sessions seamless.",
+        "2. Focus on Each Other, Not the Camera",
+        "Hard as this might seem, it's a great hack! The best wedding photos capture real emotions. So, instead of worrying about posing, focus on your partner. Whisper an inside joke, hold hands, or steal a quiet moment together. When you connect naturally, your photos will reflect that authenticity.",
+        "3. Trust the Process (and Your Photographer)",
+        "A professional photographer knows how to guide you, adjust your angles, and capture the best moments. Trust their direction, and don't overthink your expressions.",
+        "Bonus: Enjoy the Moment!",
+        "The day is about you, not just the photos. The more you focus on soaking in the experience (laughing, celebrating, and being present) the more effortless and beautiful your photos will be.",
+        "Feeling comfortable in front of the camera is about trust and connection. When you let go of the pressure to \"pose perfectly\" and simply enjoy your day next to the love of your life, your photos will radiate what you feel inside.",
+        "Planning your Toronto wedding? Let's chat about capturing your love story in the most natural and authentic way possible."
       ]
     },
     // Add more blog posts as needed
