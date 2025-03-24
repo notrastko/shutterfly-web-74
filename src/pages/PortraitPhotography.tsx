@@ -43,7 +43,9 @@ const PortraitPhotography = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div>
                   <p className="text-lg text-muted-foreground mb-6">
-                    Our portrait photography focuses on capturing authentic expressions and genuine personalities. Whether for professional headshots, family portraits, or personal branding, we create images that reflect who you truly are.
+                    From studio sessions to natural outdoor settings, each shoot is tailored to match your
+                    vision. We offer professional headshots, personal portraits, and creative lifestyle
+                    sessions—delivering images that reflect your personality and essence.
                   </p>
                   <p className="text-lg text-muted-foreground">
                     We guide you through the entire process, from planning your session to selecting the perfect images, ensuring a comfortable and enjoyable experience.

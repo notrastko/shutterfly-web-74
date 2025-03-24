@@ -41,10 +41,18 @@ const MediaProduction = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div>
                   <p className="text-lg text-muted-foreground mb-6">
-                    Our media production services focus on creating compelling visual content that tells your story and engages your audience. Whether for commercials, corporate videos, or social media campaigns, we deliver high-quality productions that elevate your brand.
+                    We help brands and businesses connect with their target audience through visual media
+                    and storytelling. We combine creativity with the science and psychology of perception and persuasion
+                    (how people see, interpret, and respond to visuals) to create relatable visuals that turn
+                    engagement into conversion.
+                  </p>
+                  <p className="text-lg text-muted-foreground mb-6">
+                    Our visuals aren't just aesthetically pleasing; they capture attention, engineer perception,
+                    increase visibility, position your product or brand, build credibility, inspire connection,
+                    and action.
                   </p>
                   <p className="text-lg text-muted-foreground">
-                    We guide you through the entire process, from concept development to post-production, ensuring a seamless and successful project.
+                    Our expertise spans ideation to execution ensuring maximum impact.
                   </p>
                 </div>
                 <div className="aspect-[4/5] overflow-hidden rounded-lg">
