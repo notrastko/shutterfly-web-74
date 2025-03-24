@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import WeddingPhotography from "./pages/WeddingPhotography";
 import PortraitPhotography from "./pages/PortraitPhotography";
 import MediaProduction from "./pages/MediaProduction";
+import Services from "./pages/Services";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/wedding-photography" element={<WeddingPhotography />} />
           <Route path="/portrait-photography" element={<PortraitPhotography />} />
           <Route path="/media-production" element={<MediaProduction />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogPost />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

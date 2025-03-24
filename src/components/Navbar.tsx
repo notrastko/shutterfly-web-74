@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -54,7 +53,7 @@ const Navbar = () => {
         
         <div className="hidden md:flex items-center space-x-10">
           <NavLink href="/#about" className={textColorClass}>About Us</NavLink>
-          <NavLink href="/#services" className={textColorClass}>Services</NavLink>
+          <NavLink to="/services" className={textColorClass}>Services</NavLink>
           <NavLink to="/wedding-photography" className={textColorClass}>Wedding</NavLink>
           <NavLink to="/portrait-photography" className={textColorClass}>Portrait</NavLink>
           <NavLink to="/media-production" className={textColorClass}>Media</NavLink>
@@ -88,7 +87,7 @@ const Navbar = () => {
       >
         <div className="flex flex-col items-center space-y-8">
           <NavLink href="/#about" className="text-white" onClick={toggleMenu}>About Us</NavLink>
-          <NavLink href="/#services" className="text-white" onClick={toggleMenu}>Services</NavLink>
+          <NavLink to="/services" className="text-white" onClick={toggleMenu}>Services</NavLink>
           <NavLink to="/wedding-photography" className="text-white" onClick={toggleMenu}>Wedding</NavLink>
           <NavLink to="/portrait-photography" className="text-white" onClick={toggleMenu}>Portrait</NavLink>
           <NavLink to="/media-production" className="text-white" onClick={toggleMenu}>Media</NavLink>
