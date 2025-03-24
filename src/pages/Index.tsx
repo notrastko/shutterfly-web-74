@@ -1,11 +1,9 @@
-
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Camera, User, Film } from "lucide-react";
 import { Motion } from "@/components/ui/motion";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 const Index = () => {
   // Smooth scroll implementation
@@ -67,9 +65,6 @@ const Index = () => {
           linkTo="/media-production"
         />
       </div>
-      
-      {/* Footer */}
-      <Footer />
     </div>
   );
 };
