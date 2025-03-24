@@ -62,6 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Omilia brand colors
+				omilia: {
+					black: '#000000',
+					indigo: '#222257',
+					yellow: '#ffc40c',
+					green: '#279a6d',
+					burgundy: '#a21c3c',
 				}
 			},
 			borderRadius: {
@@ -114,8 +122,9 @@ export default {
 				'image-shine': 'image-shine 1.5s linear infinite'
 			},
 			fontFamily: {
-				sans: ['SF Pro Display', 'Inter', 'sans-serif'],
-				serif: ['SF Pro Text', 'serif']
+				sans: ['Montserrat', 'SF Pro Display', 'Inter', 'sans-serif'],
+				visby: ['Visby CF', 'sans-serif'],
+				tenez: ['Tenez', 'serif']
 			}
 		}
 	},

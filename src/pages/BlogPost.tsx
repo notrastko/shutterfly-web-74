@@ -39,7 +39,7 @@ const BlogPost = () => {
       
       <article className="container mx-auto py-12 px-6 max-w-4xl">
         <Motion animation="fade-in">
-          <Link to="/blog" className="inline-flex items-center text-muted-foreground mb-8">
+          <Link to="/blog" className="inline-flex items-center text-omilia-indigo mb-8">
             <ChevronLeft className="mr-2 h-4 w-4" />
             Back to Blog
           </Link>
@@ -52,20 +52,20 @@ const BlogPost = () => {
           
           <div className="flex flex-wrap items-center text-sm text-muted-foreground gap-4 mb-6">
             <div className="flex items-center">
-              <Calendar className="w-4 h-4 mr-2" />
+              <Calendar className="w-4 h-4 mr-2 text-omilia-indigo" />
               {blogPost.date}
             </div>
             <div className="flex items-center">
-              <User className="w-4 h-4 mr-2" />
+              <User className="w-4 h-4 mr-2 text-omilia-indigo" />
               {blogPost.author}
             </div>
             <div className="flex items-center">
-              <Clock className="w-4 h-4 mr-2" />
+              <Clock className="w-4 h-4 mr-2 text-omilia-indigo" />
               {blogPost.readTime} min read
             </div>
           </div>
           
-          <h1 className="text-3xl md:text-4xl font-medium mb-8">{blogPost.title}</h1>
+          <h1 className="font-visby text-3xl md:text-4xl font-medium mb-8">{blogPost.title}</h1>
           
           <div className="prose max-w-none">
             {blogPost.content.map((paragraph, index) => (
@@ -78,9 +78,9 @@ const BlogPost = () => {
           <div className="border-t border-border mt-12 pt-8">
             <h3 className="text-xl font-medium mb-4">Share this article</h3>
             <div className="flex gap-4">
-              <Button variant="outline" size="sm">Facebook</Button>
-              <Button variant="outline" size="sm">Twitter</Button>
-              <Button variant="outline" size="sm">LinkedIn</Button>
+              <Button variant="accent" size="sm">Facebook</Button>
+              <Button variant="secondary" size="sm">Twitter</Button>
+              <Button variant="highlight" size="sm">LinkedIn</Button>
             </div>
           </div>
         </Motion>
